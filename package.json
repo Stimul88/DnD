@@ -1,0 +1,35 @@
+{
+  "name": "DnD",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:Stimul88/Events.git",
+  "author": "StimUL <stimul881988@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest --coverage",
+    "lint": "eslint"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@testing-library/jest-dom": "^6.4.1",
+    "css-loader": "^6.9.1",
+    "eslint": "^8.56.0",
+    "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "md-converter": "^1.0.3",
+    "mini-css-extract-plugin": "^2.7.7",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0"
+  }
+}
