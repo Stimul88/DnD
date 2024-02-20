@@ -11,8 +11,6 @@ export default class Add {
     this.addContainer = Array.from(document.querySelectorAll('.add-container '))
     this.icon = document.querySelectorAll('.icon');
     this.addCardBtn = document.querySelectorAll('.add-card-btn');
-    this.container = document.querySelector('.container');
-    this.actualElement = undefined;
   }
 
   addArea () {
@@ -45,7 +43,9 @@ export default class Add {
           this.textArea[index].classList.add('hidden')
           this.otherBtn[index].classList.add('hidden')
           this.addContainer[index].classList.remove('hidden')
-          this.items[index].innerHTML += `<div class="item-todo" draggable="true">${this.textArea[index].value}</div>`
+          this.items[index].innerHTML += `<div class="item-todo" draggable="true">${this.textArea[index].value}
+                                            <span class="item-todo-icon hidden"></span>
+                                            </div>`
           this.textArea[index].value = ''
           insert.saveLocal()
         } else {

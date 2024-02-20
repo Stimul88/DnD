@@ -13,21 +13,29 @@ export default class Del {
   }
 
   mouseover(e) {
-    const icon = document.createElement('span')
-    icon.className = 'item-todo-icon'
     if(e.target.classList.contains('item-todo')) {
-      e.target.appendChild(icon)
+      if(e.target.querySelector('.item-todo-icon')) {
+        e.target.querySelector('.item-todo-icon').classList.remove('hidden')
+      }
+
+    }
+    if(e.target.classList.contains('item-todo-icon')) {
+      e.target.classList.remove('hidden')
     }
   }
 
   mouseout(e) {
-    const delIcon = document.querySelector('.item-todo-icon')
-    if(delIcon) {
-      if(!e.target.classList.contains('item-todo') || !e.relatedTarget.classList.contains('item-todo-icon')) {
-        delIcon.remove()
+    if(e.target.classList.contains('item-todo')) {
+      const delIcon = e.target.querySelector('.item-todo-icon')
+      if(delIcon) {
+        delIcon.classList.add('hidden')
+        e.target.classList.remove('grabbing')
+        e.target.classList.add('grab')
       }
     }
-
+    if(e.target.classList.contains('item-todo-icon')) {
+      e.target.classList.add('hidden')
+    }
   }
 
   del(e) {

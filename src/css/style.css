@@ -43,18 +43,39 @@ h2 {
     position: relative;
     word-wrap: break-word;
     min-height: 30px;
+    width: 330px;
     border: none;
     padding: 10px 40px 10px 10px;
     margin: 10px 10px;
-    cursor: grab;
     background: #fff;
     border-radius: 3px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
 }
 
-.item-todo:active {
+.item-todo-light {
+    position: relative;
+    word-wrap: break-word;
+    min-height: 30px;
+    width: 330px;
+    border: none;
+    padding: 10px 40px 10px 10px;
+    margin: 10px 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+    background:black;
+    opacity:0.3
+}
+
+.grab {
+    cursor: grab;
+}
+.grabbing {
     cursor: grabbing;
 }
+
+/*.item-todo:active {*/
+/*    cursor: grabbing;*/
+/*}*/
 
 .item-todo-icon {
     width: 30px;
@@ -154,14 +175,14 @@ h2 {
 }
 
 
-.item-todo.dragged {
-    width: 100px;
-    border-radius: 10px;
-    position: absolute;
-    z-index: 999;
-    pointer-events: none;
-    background: #fff;
-}
+/*.item-todo.dragged {*/
+/*    width: 330px;*/
+/*    border-radius: 10px;*/
+/*    position: absolute;*/
+/*    z-index: 999;*/
+/*    pointer-events: none;*/
+/*    background: #fff;*/
+/*}*/
 
 .close {
     position: relative;
@@ -177,12 +198,12 @@ h2 {
     display: none;
 }
 
-.is-dragging {
-    scale: 1.05;
-    box-shadow: 0 1px 1px rgba(0,0,0,.15), 0 2px 2px rgba(0,0,0,.15), 0 4px 4px rgba(0,0,0,.15), 0 8px 8px rgba(0,0,0,.15), 0 16px 16px rgba(0,0,0,.15);
-    background-color: rgb(50, 50, 50);
-    color: white;
-    cursor: grabbing;
-}
+/*.is-dragging {*/
+/*    scale: 1.05;*/
+/*    box-shadow: 0 1px 1px rgba(0,0,0,.15), 0 2px 2px rgba(0,0,0,.15), 0 4px 4px rgba(0,0,0,.15), 0 8px 8px rgba(0,0,0,.15), 0 16px 16px rgba(0,0,0,.15);*/
+/*    background-color: rgb(50, 50, 50);*/
+/*    color: white;*/
+/*    cursor: grabbing;*/
+/*}*/
 
 
