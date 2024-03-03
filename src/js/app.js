@@ -95,7 +95,6 @@ container.onmousedown = function(e) { // (1) отследить нажатие
           mouseUpItem.classList.add('grab')
           mouseUpItem.classList.remove('grabbing')
           mouseUpItem.removeAttribute("style")
-          // mouseUpItem.children[0].classList.add('hidden')
           document.removeEventListener('mousemove', onMouseMove);
           mouseUpItem.removeEventListener('mouseup', mouseup);
           currentDroppable = null
