@@ -40,6 +40,7 @@ export default class Del {
 
   del(e) {
     if(e.target.classList.contains('item-todo-icon')) {
+      e.target.classList.add('hidden')
       e.target.parentNode.remove()
       insert.saveLocal()
     }
