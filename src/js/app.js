@@ -69,7 +69,6 @@ container.onmousedown = function(e) { // (1) отследить нажатие
 
           if (currentDroppable) {
             // const itemToDo = containerBox.querySelectorAll('.item-todo')
-            console.log(currentDroppable.nextSibling)
             currentDroppable.nextSibling.remove()
 
             // логика обработки процесса "вылета" из droppable (удаляем подсветку)
@@ -86,10 +85,10 @@ container.onmousedown = function(e) { // (1) отследить нажатие
 
     document.addEventListener('mousemove', onMouseMove);
 
-    function mouseup(ev) {
+    function mouseup() {
       if(currentDroppable !== null) {
         if(currentDroppable.classList.contains('item-todo')) {
-          console.log(currentDroppable.nextSibling)
+
           currentDroppable.nextSibling.remove()
           currentDroppable.insertAdjacentElement('afterend', mouseUpItem)
 
